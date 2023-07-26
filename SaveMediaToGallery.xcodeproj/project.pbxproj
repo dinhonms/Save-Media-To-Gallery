@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		776F17F42A6EF9BD00468B79 /* SaveMediaToGallery.h in Headers */ = {isa = PBXBuildFile; fileRef = 776F17F32A6EF9BD00468B79 /* SaveMediaToGallery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		776F17FB2A6EF9F000468B79 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F17FA2A6EF9F000468B79 /* ImageSaver.swift */; };
 		776F181D2A6F06BB00468B79 /* UnityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776F181C2A6F06BB00468B79 /* UnityBridge.swift */; };
+		77ACDFA72A7149A80094A093 /* MediaSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ACDFA62A7149A80094A093 /* MediaSaver.swift */; };
+		77C35C8B2A71CA0E0013040D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C35C8A2A71CA0E0013040D /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		776F17F02A6EF9BD00468B79 /* SaveMediaToGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SaveMediaToGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		776F17F32A6EF9BD00468B79 /* SaveMediaToGallery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveMediaToGallery.h; sourceTree = "<group>"; };
-		776F17FA2A6EF9F000468B79 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		776F181C2A6F06BB00468B79 /* UnityBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityBridge.swift; sourceTree = "<group>"; };
+		77ACDFA62A7149A80094A093 /* MediaSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSaver.swift; sourceTree = "<group>"; };
+		77C35C8A2A71CA0E0013040D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				776F17F32A6EF9BD00468B79 /* SaveMediaToGallery.h */,
-				776F17FA2A6EF9F000468B79 /* ImageSaver.swift */,
 				776F181C2A6F06BB00468B79 /* UnityBridge.swift */,
+				77ACDFA62A7149A80094A093 /* MediaSaver.swift */,
+				77C35C8A2A71CA0E0013040D /* Helper.swift */,
 			);
 			path = SaveMediaToGallery;
 			sourceTree = "<group>";
@@ -137,7 +140,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				776F181D2A6F06BB00468B79 /* UnityBridge.swift in Sources */,
-				776F17FB2A6EF9F000468B79 /* ImageSaver.swift in Sources */,
+				77ACDFA72A7149A80094A093 /* MediaSaver.swift in Sources */,
+				77C35C8B2A71CA0E0013040D /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

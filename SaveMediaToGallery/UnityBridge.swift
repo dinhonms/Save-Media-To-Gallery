@@ -7,20 +7,12 @@
 
 import Foundation
 
-var imageSaver = ImageSaver()
-
 @_cdecl("saveImage")
-public func saveImage(imageName: UnsafePointer<CChar>){
-    imageSaver.saveToPhotoAlbum(imageName: getSafeString(imageName))
+public func saveImage(imageNameWithExtension: UnsafePointer<CChar>, albumName: UnsafePointer<CChar>){
+    MediaSaver.shared.saveImageToAlbum(albumName: Helper.getSafeString(albumName), imageNameWithExtension: Helper.getSafeString(imageNameWithExtension))
 }
 
-func getSafeString(_ value: UnsafePointer<CChar>) -> String{
-    var tempString: String = "Empty Title"
-    
-    if let cTitle = String(validatingUTF8: value){
-        tempString = cTitle
-    }
-    
-    return tempString
+@_cdecl("asdf")
+public func saveVideo(videoNameWithExtension: UnsafePointer<CChar>, albumName: UnsafePointer<CChar>){
+    MediaSaver.shared.saveVideoToAlbum(albumName: Helper.getSafeString(albumName), videoPath: URL(string: Helper.getSavedVideo(videoNameWithExtension: Helper.getSafeString(videoNameWithExtension))!)!)
 }
-
