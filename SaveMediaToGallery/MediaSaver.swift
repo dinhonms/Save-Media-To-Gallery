@@ -1,5 +1,5 @@
 //
-//  MyAwsomeAlbum.swift
+//  MediaSaver.swift
 //  SaveMediaToGallery
 //
 //  Created by Nonato Sousa on 26/07/23.
@@ -12,6 +12,9 @@ class MediaSaver: NSObject {
     static let shared = MediaSaver()
     
     private var assetCollection: PHAssetCollection!
+    
+    public var onSuccess: ((String) -> Void)?
+    public var onError: ((String) -> Void)?
     
     private func checkAuthorizationWithHandler(albumName: String, completion: @escaping ((_ success: Bool) -> Void)) {
         if PHPhotoLibrary.authorizationStatus() == .notDetermined {
@@ -85,8 +88,10 @@ class MediaSaver: NSObject {
                     
                 }, completionHandler: { (success, error) in
                     if success {
+                        self.onSuccess?("[NATIVE] Image successfully saved to album \(albumName).");
                         print("[NATIVE] Image successfully saved to album \(albumName).")
                     } else {
+                        self.onError?("[NATIVE] Error saving image to album \(albumName): \(error!.localizedDescription)");
                         print("[NATIVE] Error saving image to album \(albumName): \(error!.localizedDescription)")
                     }
                 })
@@ -111,8 +116,10 @@ class MediaSaver: NSObject {
                     }
                 }, completionHandler:  { (success, error) in
                     if success {
+                        self.onSuccess?("[NATIVE] Video successfully saved to album \(albumName).")
                         print("[NATIVE] Video successfully saved to album \(albumName).")
                     } else {
+                        self.onError?("Error saving video to album \(albumName): \(error!.localizedDescription)")
                         print("Error saving video to album \(albumName): \(error!.localizedDescription)")
                     }
                 })
