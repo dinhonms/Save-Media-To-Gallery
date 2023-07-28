@@ -50,7 +50,7 @@ Disable bitcode and make a new build in order to sove this problem:
 error build: '.../Save Media Plugin/Frameworks/Plugins/iOS/SaveMediaToGallery.framework/SaveMediaToGallery' does not contain bitcode. You must rebuild it with bitcode enabled (Xcode setting ENABLE_BITCODE), obtain an updated library from the vendor, or disable bitcode for this target. file '.../Save Media Plugin/Frameworks/Plugins/iOS/SaveMediaToGallery.framework/SaveMediaToGallery' for architecture arm64
 ```
 
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/25248564/256626217-cba333c4-b8ec-4cc3-b629-69f38f860724.png.png" alt="Troubleshooting">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/25248564/256626217-cba333c4-b8ec-4cc3-b629-69f38f860724.png" alt="Troubleshooting">
 
 ## 📫 Contrubuting with an Android version
 
