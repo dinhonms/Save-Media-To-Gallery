@@ -64,9 +64,6 @@ If you are interested in contributing to this project, follow the steps:
 
 Check out the GitHub Pull Request at [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## 🤝 Contributors
-
-
 ## 📝 License
 
 This project is licensed under: you can do whatever you want.
